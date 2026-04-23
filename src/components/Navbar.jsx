@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle.jsx";
 import assets from "../assets/assets.js";
 
 const Navbar = ({ theme, setTheme }) => {
@@ -53,6 +54,8 @@ const Navbar = ({ theme, setTheme }) => {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
+        <ThemeToggle theme={theme} setTheme={setTheme} />
+
         <img
           src={theme === "dark" ? assets.menu_icon_dark : assets.menu_icon}
           className="w-8 sm:hidden"
