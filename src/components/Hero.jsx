@@ -10,6 +10,14 @@ const Hero = () => {
         <img className="w-20" src={assets.group_profile} alt="group profile" />
         <p className="text-xs font-medium">Trusted by 5k+ people</p>
       </div>
+
+      <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-23.75 max-w-5xl">
+        Turning Imagination Into{" "}
+        <span className="bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent">
+          Digital
+        </span>{" "}
+        Impact.
+      </h1>
     </div>
   );
 };
