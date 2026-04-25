@@ -39,6 +39,36 @@ export const company_logos = [
   { id: 6, logo: google_logo },
 ];
 
+export const servicesData = [
+  {
+    id: 1,
+    title: "Advertising",
+    description:
+      "We turn bold ideas into powerful digital solutions that connect & engage.",
+    icon: ads_icon,
+  },
+  {
+    id: 2,
+    title: "Content Marketing",
+    description: "We help you execute your plan and deliver results.",
+    icon: marketing_icon,
+  },
+  {
+    id: 3,
+    title: "Content Writing",
+    description: "We help you write good content that drives organic traffic.",
+    icon: content_icon,
+  },
+
+  {
+    id: 4,
+    title: "Social Media",
+    description:
+      "We help you build a strong social media presence and engage with your audience.",
+    icon: social_icon,
+  },
+];
+
 const assets = {
   logo,
   arrow_icon,
