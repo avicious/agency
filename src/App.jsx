@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Trusted from "./components/Trusted";
 
 const App = () => {
   const getTheme = localStorage.getItem("theme")
@@ -13,6 +14,7 @@ const App = () => {
     <div className="dark:bg-black relative">
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
+      <Trusted />
     </div>
   );
 };
