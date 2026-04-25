@@ -30,6 +30,11 @@ const Hero = () => {
           src={assets.hero_img}
           alt="two people looking at a laptop"
         />
+        <img
+          className="absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden select-none pointer-events-none"
+          src={assets.bgImage1}
+          alt="gradient"
+        />
       </div>
     </div>
   );
