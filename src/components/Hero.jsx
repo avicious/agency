@@ -23,6 +23,14 @@ const Hero = () => {
         Creating meaningful connections and turning big ideas into interactive
         digital experiences.
       </p>
+
+      <div className="relative">
+        <img
+          className="w-full max-w-6xl"
+          src={assets.hero_img}
+          alt="two people looking at a laptop"
+        />
+      </div>
     </div>
   );
 };
