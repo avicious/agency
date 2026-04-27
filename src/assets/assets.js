@@ -59,7 +59,6 @@ export const servicesData = [
     description: "We help you write good content that drives organic traffic.",
     icon: content_icon,
   },
-
   {
     id: 4,
     title: "Social Media",
