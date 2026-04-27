@@ -68,6 +68,28 @@ export const servicesData = [
   },
 ];
 
+export const workData = [
+  {
+    id: 1,
+    title: "Mobile App Marketing",
+    description:
+      "We turn bold ideas into powerful digital solutions that connect and engage.",
+    image: work_mobile_app,
+  },
+  {
+    id: 2,
+    title: "Dashboard Management",
+    description: "We help you execute your plan and deliver results.",
+    image: work_dashboard_management,
+  },
+  {
+    id: 3,
+    title: "Fitness App Promotion",
+    description: "We help you create a marketing strategy that drives results.",
+    image: work_fitness_app,
+  },
+];
+
 const assets = {
   logo,
   arrow_icon,

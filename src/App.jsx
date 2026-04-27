@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Trusted from "./components/Trusted";
 import Services from "./components/Services";
+import Work from "./components/Work";
 
 const App = () => {
   const getTheme = localStorage.getItem("theme")
@@ -17,6 +18,7 @@ const App = () => {
       <Hero />
       <Trusted />
       <Services />
+      <Work />
     </div>
   );
 };
