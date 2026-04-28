@@ -5,6 +5,7 @@ import Trusted from "./components/Trusted";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Teams from "./components/Teams";
+import Contact from "./components/Contact";
 
 const App = () => {
   const getTheme = localStorage.getItem("theme")
@@ -21,6 +22,7 @@ const App = () => {
       <Services />
       <Work />
       <Teams />
+      <Contact />
     </div>
   );
 };
