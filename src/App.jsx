@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Trusted from "./components/Trusted";
 import Services from "./components/Services";
 import Work from "./components/Work";
+import Teams from "./components/Teams";
 
 const App = () => {
   const getTheme = localStorage.getItem("theme")
@@ -19,6 +20,7 @@ const App = () => {
       <Trusted />
       <Services />
       <Work />
+      <Teams />
     </div>
   );
 };
