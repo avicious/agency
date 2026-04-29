@@ -10,6 +10,7 @@ import {
 } from "./components/index";
 
 const App = () => {
+  // Fetching theme from local storage for persistance
   const getTheme = localStorage.getItem("theme")
     ? localStorage.getItem("theme")
     : "light";
