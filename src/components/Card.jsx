@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 
 const Card = ({ service }) => {
+  // States to handle position and visibility of the gradient border
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
 
   const divRef = useRef(null);
 
+  // Handling mouse movements by getting coords and setting position accordingly
   const handleMouseMove = (e) => {
     const bounds = divRef.current.getBoundingClientRect();
     setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top });
