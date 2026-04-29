@@ -30,6 +30,7 @@ import menu_icon_dark from "./menu_icon_dark.svg";
 import sun_icon from "./sun_icon.svg";
 import moon_icon from "./moon_icon.svg";
 
+// Array of Company Logos for Trusted section
 export const company_logos = [
   { id: 1, logo: microsoft_logo },
   { id: 2, logo: zoom_logo },
@@ -39,6 +40,7 @@ export const company_logos = [
   { id: 6, logo: google_logo },
 ];
 
+// Array of Service data for Service section
 export const servicesData = [
   {
     id: 1,
@@ -68,6 +70,7 @@ export const servicesData = [
   },
 ];
 
+// Array of Work data for Work section
 export const workData = [
   {
     id: 1,
@@ -90,36 +93,7 @@ export const workData = [
   },
 ];
 
-const assets = {
-  logo,
-  arrow_icon,
-  group_profile,
-  bgImage1,
-  bgImage2,
-  hero_img,
-  ads_icon,
-  content_icon,
-  marketing_icon,
-  social_icon,
-  menu_icon,
-  close_icon,
-  work_mobile_app,
-  work_fitness_app,
-  work_dashboard_management,
-  email_icon,
-  person_icon,
-  facebook_icon,
-  twitter_icon,
-  instagram_icon,
-  linkedin_icon,
-  logo_dark,
-  menu_icon_dark,
-  sun_icon,
-  moon_icon,
-};
-
-export default assets;
-
+// Array of Team data for Team section
 export const teamData = [
   {
     id: 1,
@@ -173,3 +147,34 @@ export const teamData = [
     image: "https://randomuser.me/api/portraits/women/14.jpg",
   },
 ];
+
+// For cleaner asset imports
+const assets = {
+  logo,
+  arrow_icon,
+  group_profile,
+  bgImage1,
+  bgImage2,
+  hero_img,
+  ads_icon,
+  content_icon,
+  marketing_icon,
+  social_icon,
+  menu_icon,
+  close_icon,
+  work_mobile_app,
+  work_fitness_app,
+  work_dashboard_management,
+  email_icon,
+  person_icon,
+  facebook_icon,
+  twitter_icon,
+  instagram_icon,
+  linkedin_icon,
+  logo_dark,
+  menu_icon_dark,
+  sun_icon,
+  moon_icon,
+};
+
+export default assets;
