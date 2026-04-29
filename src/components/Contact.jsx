@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center gap-6 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
+      className="flex-wrapper pt-30 text-gray-700 dark:text-white"
     >
       <Title
         title="Reach out to us"
@@ -52,7 +52,8 @@ const Contact = () => {
           type="submit"
           className="w-max flex gap-2 bg-primary text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all"
         >
-          Submit <img src={assets.arrow_icon} alt="arrow icon" className="w-4" />
+          Submit{" "}
+          <img src={assets.arrow_icon} alt="arrow icon" className="w-4" />
         </button>
       </form>
     </div>
