@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import assets from "../assets/assets";
 
 const ThemeToggle = ({ theme, setTheme }) => {
+  // To fetch browser preference and setting theme accordingly
   useEffect(() => {
     const prefersDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)",
@@ -10,6 +11,7 @@ const ThemeToggle = ({ theme, setTheme }) => {
     setTheme(theme || (prefersDarkMode ? "dark" : "light"));
   }, []);
 
+  // Added class based on the theme and storing it in the localstorage of persistence
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
