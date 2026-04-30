@@ -8,6 +8,7 @@ import {
   Teams,
   Contact,
 } from "./components/index";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   // Fetching theme from local storage for persistance
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div className="dark:bg-black relative">
       <Navbar theme={theme} setTheme={setTheme} />
+      <Toaster />
       <Hero />
       <Trusted />
       <Services />
