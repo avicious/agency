@@ -7,6 +7,7 @@ import {
   Work,
   Teams,
   Contact,
+  Footer,
 } from "./components/index";
 import { Toaster } from "react-hot-toast";
 
@@ -28,6 +29,7 @@ const App = () => {
       <Work />
       <Teams />
       <Contact />
+      <Footer />
     </div>
   );
 };
