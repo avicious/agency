@@ -2,6 +2,30 @@ import assets from "../assets/assets";
 import Title from "./Title";
 
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
+    // formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      // ("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      // (data.message);
+    }
+  };
+
   return (
     <div
       id="contact"
@@ -12,13 +36,17 @@ const Contact = () => {
         content="From strategy to execution, we craft digital solutions that move your business forward."
       />
 
-      <form className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full">
-        <div className="">
+      <form
+        onSubmit={onSubmit}
+        className="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl w-full"
+      >
+        <div>
           <p className="mb-2 text-sm font-medium">Your Name</p>
           <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
             <img src={assets.person_icon} alt="person icon" />
             <input
               type="text"
+              name="name"
               placeholder="Enter your name"
               className="w-full p-3 text-sm outline-none"
               required
@@ -26,12 +54,13 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="">
+        <div>
           <p className="mb-2 text-sm font-medium">Email ID</p>
           <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
             <img src={assets.email_icon} alt="email icon" />
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               className="w-full p-3 text-sm outline-none"
               required
@@ -43,8 +72,10 @@ const Contact = () => {
           <p className="mb-2 text-sm font-medium">Message</p>
           <textarea
             rows={8}
+            name="message"
             placeholder="Enter your message"
             className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600"
+            required
           />
         </div>
 
