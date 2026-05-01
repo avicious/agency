@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import assets from "../assets/assets.js";
 
 const Hero = () => {
@@ -6,25 +7,49 @@ const Hero = () => {
       id="hero"
       className="flex-wrapper py-20 text-center w-full overflow-hidden text-gray-700 dark:text-white"
     >
-      <div className="inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        viewport={{ once: true }}
+        className="inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full"
+      >
         <img className="w-20" src={assets.group_profile} alt="group profile" />
         <p className="text-xs font-medium">Trusted by 5k+ people</p>
-      </div>
+      </motion.div>
 
-      <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-23.75 max-w-5xl">
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        viewport={{ once: true }}
+        className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-23.75 max-w-5xl"
+      >
         Turning Imagination Into{" "}
         <span className="bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent">
           Digital
         </span>{" "}
         Impact.
-      </h1>
+      </motion.h1>
 
-      <p className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3">
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        viewport={{ once: true }}
+        className="text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3"
+      >
         Creating meaningful connections and turning big ideas into interactive
         digital experiences.
-      </p>
+      </motion.p>
 
-      <div className="relative">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 2 }}
+        viewport={{ once: true }}
+        className="relative"
+      >
         <img
           className="w-full max-w-6xl"
           src={assets.hero_img}
@@ -35,7 +60,7 @@ const Hero = () => {
           src={assets.bgImage1}
           alt="gradient"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
