@@ -26,8 +26,8 @@ const Services = () => {
       />
 
       <div className="flex flex-col md:grid grid-cols-2 gap-6">
-        {servicesData.map((service) => (
-          <Card key={service.id} service={service} />
+        {servicesData.map((service, index) => (
+          <Card key={service.id} index={index} service={service} />
         ))}
       </div>
     </motion.div>

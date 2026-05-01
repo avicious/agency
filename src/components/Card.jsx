@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
 
-const Card = ({ service }) => {
+const Card = ({ service, index }) => {
   // States to handle position and visibility of the gradient border
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
