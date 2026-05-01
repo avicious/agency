@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { servicesData } from "../assets/assets";
 import assets from "../assets/assets";
 import Card from "./Card";
