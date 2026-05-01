@@ -6,7 +6,11 @@ import Title from "./Title";
 
 const Services = () => {
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      transition={{ staggerChildren: 0.2 }}
+      viewport={{ once: true }}
       id="services"
       className="flex-wrapper relative pb-6 pt-30 text-gray-700 dark:text-white"
     >
@@ -26,7 +30,7 @@ const Services = () => {
           <Card key={service.id} service={service} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
