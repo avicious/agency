@@ -5,10 +5,10 @@ import { workData } from "../assets/assets";
 const Work = () => {
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
-      transition={{ staggerChildren: 0.2 }}
       id="work"
       className="flex-wrapper pt-30 text-gray-700 dark:text-white"
     >
@@ -19,11 +19,7 @@ const Work = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {workData.map((work, index) => (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
+          <div
             key={work.id}
             className="hover:scale-102 duration-500 transition-all cursor-pointer"
           >
@@ -35,7 +31,7 @@ const Work = () => {
 
             <h3 className="mt-3 mb-2 text-lg font-semibold">{work.title}</h3>
             <p className="text-sm opacity-60 w-5/6">{work.description}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </motion.div>
