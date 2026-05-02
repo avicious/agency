@@ -2,7 +2,7 @@
 
 A modern, fully responsive web application with dark mode built with **React**, **TailwindCSS** & **Framer Motion**, designed to provide an immersive digital experience for a marketing agency.
 
-![Project Screenshot](.github/assets/screenshot.png)
+![Project Screenshot](.github/assets/ascend.png)
 
 ## Live Demo
 
