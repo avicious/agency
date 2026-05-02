@@ -18,11 +18,7 @@ const Footer = ({ theme }) => {
           viewport={{ once: true }}
           className="space-y-5 text-sm text-gray-700 dark:text-gray-400"
         >
-          <img
-            src={theme === "dark" ? assets.logo_dark : assets.logo}
-            alt="logo"
-            className="w-32 sm:w-44"
-          />
+          <img src={assets.logo} alt="logo" className="w-32 sm:w-44" />
           <p className="max-w-md">
             From strategy to execution, we craft digital solutions that move
             your business forward.
