@@ -25,11 +25,11 @@ const Hero = () => {
         viewport={{ once: true }}
         className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-23.75 max-w-5xl"
       >
-        Turning Imagination Into{" "}
-        <span className="bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent">
+        Evolving Bold Ideas into{" "}
+        <span className="bg-linear-to-r from-primary via-cyan-500 to-[#4d8cea] bg-clip-text text-transparent">
           Digital
         </span>{" "}
-        Impact.
+        Influence.
       </motion.h1>
 
       <motion.p
@@ -51,7 +51,7 @@ const Hero = () => {
         className="relative"
       >
         <img
-          className="w-full max-w-6xl"
+          className="w-full max-w-6xl rounded-4xl"
           src={assets.hero_img}
           alt="two people looking at a laptop"
         />
