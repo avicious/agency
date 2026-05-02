@@ -19,12 +19,14 @@ const App = () => {
 
   const [theme, setTheme] = useState(getTheme);
 
+  // Adding ref for custom cursor
   const outlineRef = useRef(null);
   const dotRef = useRef(null);
 
   const mouse = useRef({ x: 0, y: 0 });
   const position = useRef({ x: 0, y: 0 });
 
+  // Replacing cursor with a custom cursor
   useEffect(() => {
     const handleMouseMove = (e) => {
       mouse.current.x = e.clientX;
