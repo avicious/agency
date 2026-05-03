@@ -19,15 +19,21 @@ const App = () => {
 
   const [theme, setTheme] = useState(getTheme);
 
+  const [hasMouse, setHasMouse] = useState(false);
+
   // Adding ref for custom cursor
   const outlineRef = useRef(null);
   const dotRef = useRef(null);
-
   const mouse = useRef({ x: 0, y: 0 });
   const position = useRef({ x: 0, y: 0 });
 
   // Replacing cursor with a custom cursor
   useEffect(() => {
+    const checkMouse = window.matchMedia("(pointer: fine)").matches;
+    setHasMouse(checkMouse);
+
+    if (!checkMouse) return;
+
     const handleMouseMove = (e) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
@@ -66,18 +72,22 @@ const App = () => {
       <Contact />
       <Footer theme={theme} />
 
-      {/* Custom Cursor Ring*/}
-      <div
-        ref={outlineRef}
-        className="fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-9999"
-        style={{ transition: "transform 0.1s ease-out" }}
-      ></div>
+      {hasMouse && (
+        <>
+          {/* Custom Cursor Ring*/}
+          <div
+            ref={outlineRef}
+            className="hidden md:block fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-9999"
+            style={{ transition: "transform 0.1s ease-out" }}
+          ></div>
 
-      {/* Custom Cursor Dot */}
-      <div
-        ref={dotRef}
-        className="fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-9999"
-      ></div>
+          {/* Custom Cursor Dot */}
+          <div
+            ref={dotRef}
+            className="hidden md:block fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-9999"
+          ></div>
+        </>
+      )}
     </div>
   );
 };
