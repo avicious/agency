@@ -16,6 +16,7 @@ A modern, fully responsive web application with dark mode built with **React**, 
 - **Web3Forms:** Facilitates secure and reliable form handling through a client-side API, ensuring instant notifications and a streamlined communication channel for users.
 - **Custom Cursor:** Features a dynamic, interactive cursor design that responds to user input and hover states, providing a unique and immersive navigational experience.
 - **Dark Mode:** Features a dynamic theme-switching system that respects user preferences and enhances readability in low-light environments using a centralized state or system-level detection.
+- **React Hot Toast:** Features a dynamic notification system that respects user preferences and enhances readability through lightweight, customizable alerts that integrate seamlessly with React's component lifecycle.
 
 ## Tech Stack
 
